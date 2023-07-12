@@ -58,6 +58,11 @@ deleteLastBtn.addEventListener('click', () => {
 });
 document.body.appendChild(deleteLastBtn);
 
+//3.6
+const deleteBtn = document.createElement("button");
+deleteBtn.textContent = "elimine el mismo elemento";
+
+
 
 
 

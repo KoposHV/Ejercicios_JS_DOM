@@ -26,4 +26,46 @@ console.log(ulCars);
 }
 document.body.appendChild(ulCars);
 
+//3.4
+const countriesData = [
+  { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=1' },
+  { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=2' },
+  { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=3' },
+  { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=4' }
+];
+for (let i = 0; i < countriesData.length; i++) {
+  const country = countriesData[i];
+  const div = document.createElement('div');
+  const h4 = document.createElement('h4');
+  const img = document.createElement('img');
+  
+  h4.textContent = country.title;
+  img.src = country.imgUrl;
+  
+  div.appendChild(h4);
+  div.appendChild(img);
+  document.body.appendChild(div);
+  console.log(country);
+}
+
+//3.5
+const deleteLastBtn = document.createElement('button');
+deleteLastBtn.textContent = 'Eliminar último';
+deleteLastBtn.addEventListener('click', () => {
+  const divs = document.querySelectorAll('div');
+  const lastDiv = divs[divs.length - 1];
+  lastDiv.remove();
+});
+document.body.appendChild(deleteLastBtn);
+
+
+
+
+
+
+
+
+
+
+
 
